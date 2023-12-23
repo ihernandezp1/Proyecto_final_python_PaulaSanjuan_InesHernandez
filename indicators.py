@@ -37,7 +37,7 @@ class Indicators:
         fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["Estocastico"], mode='lines'))
         return fig
 
-    # # grafico de media movil del precio de cierre
+    # grafico de media movil del precio de cierre
     def avg_graph(self):
         period = 30
         self.dfdata['media_movil'] = self.dfdata['Estocastico'].rolling(window=period).mean()
@@ -50,7 +50,7 @@ class Indicators:
 
         return fig
 
-    # # grafico conjunto de media movil y estocastico
+    # grafico conjunto de media movil y estocastico
     def mixed_graph(self):
         # plt.plot(self.data.index, self.data["close"])
         # plt.plot(self.data.index, self.data["media_movil"])
