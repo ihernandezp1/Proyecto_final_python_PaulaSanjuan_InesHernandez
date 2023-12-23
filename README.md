@@ -45,19 +45,27 @@ Hemos configurado un entorno virtual específico para este proyecto utilizando v
     streamlit run app.py
 ## Funcionalidades Principales
 
+### Interfaz de usuario
+
+En la parte izquierda de la vista que se abre en el navegador está el índice en el que se selecciona la vista que se quiere visualizar: 'Introducción', 'Cotizaciones' e 'Indicadores'. 
+
 ### 1. Descarga de Cotizaciones
 
 El proyecto permite descargar las cotizaciones actualizadas de la plataforma Kraken para el par de monedas seleccionado por el usuario. La información descargada será la base para el análisis posterior.
 
-En la primera vista ...
+En la vista de 'Cotizaciones' se selecciona el par a representar.
 
 ### 2. Gráficas de Movimiento
 
 Una vez se hayan descargado las cotizaciones, se podrá visualizar fácilmente el movimiento histórico del par de monedas mediante un gráfico de velas. Esta representación gráfica facilitará la identificación de patrones y tendencias en el comportamiento de las cotizaciones.
 
-En la segunda vista ...
+En la misma vista de 'Cotizaciones', una vez se selecciona el par se puede observar directamente el gráfico de velas y justo debajo el Dataframe en el que se basa la representación. 
 
 ### 3. Oscilador Estocástico
 
 Adicionalmente, el proyecto incluirá la generación de gráficas del oscilador estocástico, un indicador técnico ampliamente utilizado en el análisis técnico. Esta herramienta proporcionará insights sobre la posible sobrecompra o sobreventa del par de monedas, ayudándote a tomar decisiones informadas.
+
+El la vista de 'Indicadores' se selecciona de nuevo el par de monedas y se puede observar la cotización del par (precio de cierre en el tiempo), el indicador estocástico y la media móvil del estocástico. Además, se visualiza una gráfica combinada de los anteriores para visualizarlos de forma simultánea. Finalmente, se representa la cotización sobre su media móvil. 
+
+
 
