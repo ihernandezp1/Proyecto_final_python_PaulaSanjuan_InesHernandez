@@ -30,10 +30,17 @@ Hemos configurado un entorno virtual específico para este proyecto utilizando v
    ```bash
    git clone https://github.com/tu_usuario/tu_proyecto.git
    cd tu_proyecto
-2. Configurar el Entorno Virtual e instalar dependencias
+2. Configurar el Entorno Virtual
 
-    ```virtualenv venv
+    ```
+    virtualenv venv
+    # Para Mac: 
     source venv/bin/activate
+    # Para Windows:
+    venv/Scripts/activate
+3. Instalar dependencias 
+
+    ```
     pip install -r requirements.txt
     streamlit run app.py
 ## Funcionalidades Principales
