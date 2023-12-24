@@ -13,7 +13,7 @@ La API de Kraken se utiliza para la descarga de datos de cotizaciones actualizad
 
 ### 3. Streamlit 
 
-La interfaz de usuario ha sido creada con Streamlit, una biblioteca de Python que facilita la creaciónb de aplicaciones web interactivas. Permite seleccionar un par de criptomonedas entre seis posibles en nuestro proyecto, y visualizar las cotizaciones e indicadores. 
+La interfaz de usuario ha sido creada con Streamlit, una biblioteca de Python que facilita la creación de aplicaciones web interactivas. En nuestro caso particular, se permite seleccionar un par de criptomonedas entre seis posibles y visualizar las cotizaciones e indicadores. 
 
 ### 4. Entorno Virtual 
 
@@ -25,16 +25,27 @@ Hemos configurado un entorno virtual específico para este proyecto utilizando v
 
 ### 1. Descarga desde GitHub
 
+Desde GitHub el código se puede obtener de dos maneras: 
+
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/tu_usuario/tu_proyecto.git
+   git clone https://github.com/ihernandezp1/Proyecto_final_python_PaulaSanjuan_InesHernandez 
    cd tu_proyecto
-2. Configurar el Entorno Virtual
+
+2. **Descargar el .zip**
+
+    Se extraen los archivos de la carpeta comprimida
+    'Proyecto_final_python_PaulaSanjuan_InesHernandez-main'. Se entra a la carpeta del proyecto desde la terminal y se configura el entorno virtual, como se indica en el siguiente apartado. 
+
+
+2. Configurar y activar el Entorno Virtual
 
     ```
+    # creación
     virtualenv venv
-    # Para Mac: 
+    # activación
+    # Para MacOs: 
     source venv/bin/activate
     # Para Windows:
     venv/Scripts/activate
@@ -42,12 +53,12 @@ Hemos configurado un entorno virtual específico para este proyecto utilizando v
 
     ```
     pip install -r requirements.txt
-    streamlit run app.py
+    streamlit run main.py
 ## Funcionalidades Principales
 
 ### Interfaz de usuario
 
-En la parte izquierda de la vista que se abre en el navegador está el índice en el que se selecciona la vista que se quiere visualizar: 'Introducción', 'Cotizaciones' e 'Indicadores'. 
+En la parte izquierda de la página que se abre en el navegador, se encuentra el Menú Principal y dentro de este, está el índice en el que se selecciona la pestaña que se quiere visualizar: 'Introducción', 'Cotizaciones' e 'Indicadores'. 
 
 ### 1. Descarga de Cotizaciones
 
@@ -63,7 +74,7 @@ En la misma vista de 'Cotizaciones', una vez se selecciona el par se puede obser
 
 ### 3. Oscilador Estocástico
 
-Adicionalmente, el proyecto incluirá la generación de gráficas del oscilador estocástico, un indicador técnico ampliamente utilizado en el análisis técnico. Esta herramienta proporcionará insights sobre la posible sobrecompra o sobreventa del par de monedas, ayudándote a tomar decisiones informadas.
+Adicionalmente, el proyecto incluirá la generación de gráficas del oscilador estocástico, un indicador técnico ampliamente utilizado en el análisis bursátil. Esta herramienta proporcionará señales sobre la posible sobrecompra o sobreventa del par de monedas, ayudándonos a tomar decisiones informadas.
 
 El la vista de 'Indicadores' se selecciona de nuevo el par de monedas y se puede observar la cotización del par (precio de cierre en el tiempo), el indicador estocástico y la media móvil del estocástico. Además, se visualiza una gráfica combinada de los anteriores para visualizarlos de forma simultánea. Finalmente, se representa la cotización sobre su media móvil. 
 

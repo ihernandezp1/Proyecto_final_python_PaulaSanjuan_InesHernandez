@@ -12,17 +12,17 @@ class App:
     def intro_page(self):
         st.header('Introducción')
         st.write("¡Hola! Nos complace darte la bienvenida a nuestro proyecto de la asignatura de Python del Máster en Big Data Science de la Universidad de Navarra.")  
-        st.write("Este proyecto ha sido desarrollado por Inés Hernández y Paula Sanjuan.") 
-        st.write("En esta plataforma, exploraremos el emocionante mundo de las cotizaciones de monedas, centrándonos en los pares de divisas y utilizando herramientas de programación en Python.")
-        st.write("Nuestro proyecto tiene como objetivo analizar y visualizar la relación entre diferentes monedas a través de sus pares de cotización. Exploraremos patrones, tendencias y datos históricos para proporcionar una comprensión más profunda del mercado de divisas.")
-            
+        st.write("En esta aplicación web, exploramos las cotizaciones de diferentes criptomonedas, centrándonos en los pares de divisas y utilizando herramientas de programación en Python.")
+        st.write("Nuestro proyecto tiene como objetivo analizar y visualizar la relación entre diferentes monedas a través de sus pares de cotización. Plasmaremos patrones, tendencias y datos históricos para proporcionar una comprensión más profunda del mercado de divisas.")
+        st.write("Este proyecto ha sido desarrollado por Inés Hernández y Paula Sanjuan.")    
+
     def cot_page(self):
         st.header("Cotizaciones")
-        st.write('''En esta segunda página se puede ver el gráfico de velas del par seleccionado, además de la base de datos importada con la información de apertura, cierre, máximo, mínimo y volumen. ''')
+        st.write('''En esta segunda página se puede ver el gráfico de velas del par seleccionado, además de la base de datos importada con la información de tiempo, apertura, cierre, máximo, mínimo y volumen. ''')
 
     def ind_page(self):
         st.header("Indicadores")
-        st.write("En esta tercera ventana podemos ver la representación gráfica de la cotiación del par de monedas, el indicador estocástico y finalmente una represrntación conjunta de las cotizaciones, el estocástico y la media movil del estocástico")
+        st.write("En esta tercera ventana podemos ver la representación gráfica de la cotización del par de monedas, el indicador estocástico, la media móvil del estocástico y finalmente, representaciones conjuntas de las cotizaciones, el estocástico y media movil de ambas.")
 
     def run(self):
         col1, col2 = st.columns([3, 1])  # La primera columna ocupa 3/4 del ancho, la segunda 1/4
@@ -32,7 +32,7 @@ class App:
             # Imagen en la esquina superior derecha
             st.image('logo_unav.png', use_column_width=True)
         
-        st.sidebar.title("Main Menu")
+        st.sidebar.title("Menú Principal")
         # Create a radio button to navigate between pages
         page = st.sidebar.radio("Selecciona una página: ", ["Introducción", "Cotizaciones", "Indicadores"])
         # Create a container for the main content
@@ -88,7 +88,7 @@ class App:
                 fig3 = self.indicators.avg_graph()
                 st.plotly_chart(fig3)
 
-                st.header(f'Gráfico conjunto de la Media móvil del estocástico, Estocástico y Cotización del par {selected_pair}: ')
+                st.header(f'Gráfico conjunto de la Media móvil del estocástico y el Estocástico del par {selected_pair}: ')
                 fig4 = self.indicators.mixed_graph()
                 st.plotly_chart(fig4)
 

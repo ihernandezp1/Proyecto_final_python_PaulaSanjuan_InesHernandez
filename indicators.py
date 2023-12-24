@@ -56,17 +56,17 @@ class Indicators:
         # plt.plot(self.data.index, self.data["media_movil"])
         # plt.plot(self.data.index, self.data["Estocastico"])
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["close"], mode='lines', name= 'Precio de cierre'))
-        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["Estocastico"], mode='lines', name = 'Estocástico'))
-        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["media_movil"], mode='lines', name = 'Media móvil'))
+        # fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["close"], mode='lines', name= 'Precio de cierre'))
+        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["Estocastico"], mode='lines', name = 'Estocástico', line=dict(color='#0077cc')))
+        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["media_movil"], mode='lines', name = 'Media móvil', line=dict(color='red', width=2)))
 
         return fig
     
     # grafico conjunto de media movil y precios de cierre
     def avg_close(self):
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["close"], mode='lines', name= 'Precio de cierre'))
-        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["media_movil_close"], mode='lines', name = 'Media móvil'))
+        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["close"], mode='lines', name= 'Precio de cierre',line=dict(color='#0077cc')))
+        fig.add_trace(go.Scatter(x = self.dfdata.index, y = self.dfdata["media_movil_close"], mode='lines', name = 'Media móvil',line=dict(color='red', width=2)))
 
         return fig
 
