@@ -2,13 +2,13 @@ import pandas as pd
 import krakenex
 from pykrakenapi import KrakenAPI
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
+
 
 class Data: 
     def __init__(self): 
         self.api = krakenex.API()
         self.data = None  # DataFrame con los datos descargados
-        self.data_close = None  # DataFrame con los precios de cierreç
+        self.data_close = None  # DataFrame con los precios de cierre
         self.pair_type = None  # Tipo de par representado
 
     def set_pair_type(self, pair): 
@@ -28,9 +28,9 @@ class Data:
         except Exception as e:
             print(f"Error al obtener datos OHLC: {e}")
     
-    def get_pairs(self): 
-        pairs = self.pair_type
-        return pairs
+    # def get_pairs(self): 
+    #     pairs = self.pair_type
+    #     return pairs
     
     def data_clean(self): 
         self.data.drop('vwap', axis=1, inplace=True)

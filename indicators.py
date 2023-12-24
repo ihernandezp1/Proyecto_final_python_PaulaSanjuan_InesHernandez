@@ -1,8 +1,5 @@
-import pandas as pd
-import krakenex
-from pykrakenapi import KrakenAPI
+
 import plotly.graph_objects as go
-import matplotlib.pyplot as plt
 
 class Indicators: 
     def __init__(self):
