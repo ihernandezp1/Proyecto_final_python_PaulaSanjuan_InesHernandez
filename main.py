@@ -33,11 +33,8 @@ class App:
             st.image('logo_unav.png', use_column_width=True)
         
         st.sidebar.title("Menú Principal")
-        # Create a radio button to navigate between pages
         page = st.sidebar.radio("Selecciona una página: ", ["Introducción", "Cotizaciones", "Indicadores"])
-        # Create a container for the main content
         content = st.container()
-        # Display content based on the selected page
         with content:
             if page == "Introducción":
                 self.intro_page()
@@ -60,13 +57,8 @@ class App:
                 st.write(f'Datos para {selected_pair}: ')
                 st.write(self.data.data)
 
-                # st.write(f'Datos de precios de cierre para {selected_pair}: ')
-                # st.write(self.data.data_close)
-
-                
             elif page == "Indicadores":
                 self.ind_page()
-                # self.indicators.set_indicators(data)
                 criptos = ('ETH/USD','USDT/USD','BTC/USD','XRP/USD','SOL/USD')
                 selected_pair = st.selectbox('Selecciona un par de monedas: ', criptos)
                 self.data.set_pair_type(selected_pair)
